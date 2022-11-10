@@ -11,8 +11,8 @@
 
             //14.F:Om alla djur behöver det nya attributet, vart skulleman lägga det då?
             //F: SVAR: i Animal! 
-            Wolfman wolfman = new Wolfman(true, "wolfman", 200, 10);
-            IPerson iwolfman = new Wolfman(true, "iwolfman",200,10);
+            Wolfman wolfman = new Wolfman(true,true,"wolfman", 200, 10);
+            IPerson iwolfman = new Wolfman(true,true, "iwolfman",200,10);
            // iwolfman.Talk();
            // wolfman.Talk();
 
@@ -29,7 +29,7 @@
 
 
             List<Animal> animalList = new List<Animal>();
-
+            
             animalList.Add(wolfman);
             animalList.Add(swan);
             animalList.Add(pelican);
@@ -54,12 +54,12 @@
 
             //Skriv ut samtliga Animal Stats()
 
-            //ForeachAllAnimals(animalList);
+            // ForeachAllAnimalStats(animalList);
 
             //Förklara: Alla intasierade objekt i List<Animal> animalList ärver från basklassen Animal.
             // Även wolfman:wolf då wolf:animal. Kan alla objekt behandlas som Animal.   
 
-            ForeachOnlyDogs(animalList); //Enbart Print Hundar
+            //ForeachOnlyDogs(animalList); //Enbart Print Hundar
                                          //För att skriva ut  public string Dog.AgeStringDog(); behöver vi casta om animal till Dog,
                                          //För att metoden finns inte i Animal classen.  
 
@@ -81,7 +81,7 @@
 
         }
 
-        private static void ForeachAllAnimals(List<Animal> animalList)
+        private static void ForeachAllAnimalStats(List<Animal> animalList)
         {
             foreach(Animal animal in animalList)
             {
@@ -118,14 +118,14 @@
             
             foreach (Animal animal in animalList)
             {
-               animal.DoSound();
-               Console.WriteLine(animal.Stats());
-               Console.WriteLine();                                 
                 if(animal is IPerson)           
                 { 
                     IPerson iP = animal as IPerson;  
                      iP.Talk();   
                 }
+               animal.DoSound();
+               Console.WriteLine(animal.Stats());
+               Console.WriteLine();                                 
              }
         }
     }
