@@ -43,7 +43,7 @@
             animalList.Add(bird);
 
 
-            //PrintAnimalListWithIPersonTalks(animalList); // Fram till Exercise 3.4.7. Cast IPerson och kör IPerson.Talk() 
+            //PrintAnimalListWithIPersonTalks(animalList); // Exercise 3.4.7. type-Cast IPerson och kör IPerson.Talk() 
 
             // ForeachDogListNoHorse(); // Exercise 3.4.9
 
